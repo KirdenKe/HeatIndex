@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <ApplicationIcon>aaf5r-caalt-001.ico</ApplicationIcon>
+    <Authors>KirdenKe</Authors>
+    <Product>酷熱指數計算機</Product>
+    <Description>酷熱指數計算機</Description>
+    <Copyright>Copyright © 2023 KirdenKe</Copyright>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyName>HeatIndex</AssemblyName>
+    <Version>1.1.0</Version>
+    <NeutralLanguage>zh-TW</NeutralLanguage>
+    <PackageId></PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="aaf5r-caalt-001.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="4.12.2" />
+  </ItemGroup>
+
+</Project>
