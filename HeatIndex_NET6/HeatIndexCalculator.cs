@@ -20,6 +20,7 @@ namespace HeatIndex_NET6
         IWebDriver? driver;
         public event EventHandler<ErrorArgs> ErrorHandler;
         public event EventHandler<HeatIndexArgs> CalculatorHandler;
+        public int index;
         private string? temperature_text;
         private string? humidity_text;
         private string? url = null;
@@ -29,7 +30,7 @@ namespace HeatIndex_NET6
         private bool isdriverclosed = true;
         private bool disposedValue;
 
-        public async Task Calculate(int index)
+        public void Calculate()
         {
             HeatIndex = -2;
             temperature_text = null;
@@ -60,7 +61,6 @@ namespace HeatIndex_NET6
 
             try
             {
-                await Task.Delay(1);
                 driver = new ChromeDriver();
                 isdriverclosed = false;
                 driver.Manage().Window.Maximize();
@@ -185,6 +185,23 @@ namespace HeatIndex_NET6
             GC.SuppressFinalize(this);
         }
     }
+
+    public static class Extension
+    {
+        //非同步委派更新UI
+        public static void InvokeIfRequired(this Control control, MethodInvoker action)
+        {
+            if (control.InvokeRequired)//在非當前執行緒內 使用委派
+            {
+                control.Invoke(action);
+            }
+            else
+            {
+                action();
+            }
+        }
+    }
+
     public class ErrorArgs : EventArgs
     {
         public string ErrorMessage { get; }
@@ -195,6 +212,7 @@ namespace HeatIndex_NET6
             ErrorType = Type;
         }
     }
+
     public class HeatIndexArgs : EventArgs
     {
         public string HeatIndex { get; }

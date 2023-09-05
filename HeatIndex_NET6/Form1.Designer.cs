@@ -7,6 +7,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
         HeatIndexCalculator calculator = new HeatIndexCalculator();
+        Thread OpenWebDriver;
 
         /// <summary>
         ///  Clean up any resources being used.
