@@ -40,22 +40,22 @@ namespace HeatIndex_NET6
             switch(index)
             {
                 case 0:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=C0K46";    //斗南
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=C0K46";    //斗南
                     break;
                 case 1:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=A0C41";    //中央大學
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=A0C41";    //中央大學
                     break;
                 case 2:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=A2C56";    //農工中心
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=A2C56";    //農工中心
                     break;
                 case 3:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=A0A01";    //臺灣大學
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=A0A01";    //臺灣大學
                     break;
                 case 4:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=C0C70";    //中壢
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=C0C70";    //中壢
                     break;
                 case 5:
-                    url = "https://www.cwb.gov.tw/V8/C/W/OBS_Station.html?ID=CAAH6";    //大安森林
+                    url = "https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=CAAH6";    //大安森林
                     break;
             }
 
