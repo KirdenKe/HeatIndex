@@ -133,11 +133,11 @@ namespace HeatIndex_NET6
                 var localErrorHandler = new EventHandler<ErrorArgs>(ErrorHandler);
                 var ar = new ErrorArgs("請稍後重試...", ExceptionType.Info);
                 localErrorHandler(null, ar);
-                ar_index = new HeatIndexArgs("-2");
+                ar_index = new HeatIndexArgs("-2", "-2");
             }
             else
             {
-                ar_index = new HeatIndexArgs(String.Format("{0}", Math.Round(HeatIndex, 0)));
+                ar_index = new HeatIndexArgs(String.Format("{0}", Math.Round(HeatIndex, 0)), humidity_text);
             }
             localCalculatorHandler(null, ar_index);
         }
@@ -216,9 +216,11 @@ namespace HeatIndex_NET6
     public class HeatIndexArgs : EventArgs
     {
         public string HeatIndex { get; }
-        public HeatIndexArgs(string heatIndex)
+        public string humidity { get; }
+        public HeatIndexArgs(string heatIndex, string humidity)
         {
             HeatIndex = heatIndex;
+            this.humidity = humidity;
         }
     }
 }
